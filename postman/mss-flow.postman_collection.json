@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "0d88c589-aac7-4db4-8c4a-85d11501541c",
+		"name": "mss-flow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3803212"
+	},
+	"item": [
+		{
+			"name": "completeJob",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messageName\": \"bff14063-4bb0-4517-ab22-786f82c5ab8c-COMPLETE\",\n    \"processVariables\": {\n        \"engineModules\": { \"value\": 2, \"type\": \"Integer\" },\n        \"powerCores\": { \"value\": 1, \"type\": \"Integer\" },\n        \"commArrays\": { \"value\": 1, \"type\": \"Integer\" },\n        \"hullPlatings\": { \"value\": 3, \"type\": \"Integer\" }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mss-flow/engine-rest/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mss-flow",
+						"engine-rest",
+						"message"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,31 @@
+server:
+  servlet:
+    context-path: /mss-flow
+  port: 8080
+
+spring:
+  application:
+    name: mars-scavenging-station-flow
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/mss-camunda-db
+    username: postgres
+    password:
+
+camunda.bpm:
+  admin-user:
+    id: mss
+    password: mss
+  filter:
+    create: All tasks
+  history-level: full
+  process-engine-name: default
+  database:
+    schema-update: true
+  auto-deployment-enabled: true
+  deployment-resource-pattern:
+    - classpath*:**/*.bpmn
+    - classpath*:**/*.form
+
+mss-api:
+  base-url: http://localhost:8081/mss-api
